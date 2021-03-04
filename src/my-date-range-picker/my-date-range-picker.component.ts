@@ -304,6 +304,7 @@ export class MyDateRangePicker implements OnChanges, OnDestroy, ControlValueAcce
             let end: string = this.formatDate(this.endDate);
             this.selectionDayTxt = begin + " - " + end;
             this.titleAreaText = this.selectionDayTxt;
+            this.generateCalendar(this.beginDate.year, this.beginDate.month, true);
             this.inputFieldChanged.emit({value: this.selectionDayTxt, dateRangeFormat: this.dateRangeFormat, valid: true});
         }
         else if (value === null || value === "") {
